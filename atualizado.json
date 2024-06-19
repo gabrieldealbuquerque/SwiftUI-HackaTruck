@@ -1,0 +1,352 @@
+[
+    {
+        "id": "8ce6d9dc39b63a2b",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "fdb51cb6ff966878",
+        "type": "http in",
+        "z": "8ce6d9dc39b63a2b",
+        "name": "",
+        "url": "create",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 250,
+        "y": 280,
+        "wires": [
+            [
+                "1281e7c8e51bf2be",
+                "b31b5405946cc877"
+            ]
+        ]
+    },
+    {
+        "id": "1281e7c8e51bf2be",
+        "type": "cloudantplus out",
+        "z": "8ce6d9dc39b63a2b",
+        "name": "",
+        "cloudant": "9c5bcbbe178995ad",
+        "database": "gabrielinitiald",
+        "service": "_ext_",
+        "payonly": true,
+        "operation": "insert",
+        "x": 430,
+        "y": 280,
+        "wires": [
+            [
+                "34927ba68f8ef3e5"
+            ]
+        ]
+    },
+    {
+        "id": "34927ba68f8ef3e5",
+        "type": "http response",
+        "z": "8ce6d9dc39b63a2b",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 630,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "b31b5405946cc877",
+        "type": "debug",
+        "z": "8ce6d9dc39b63a2b",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "6feae88015425f05",
+        "type": "http in",
+        "z": "8ce6d9dc39b63a2b",
+        "name": "",
+        "url": "search",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 250,
+        "y": 420,
+        "wires": [
+            [
+                "75b0643770f578e9",
+                "d2d6757787f758a2"
+            ]
+        ]
+    },
+    {
+        "id": "75b0643770f578e9",
+        "type": "cloudantplus in",
+        "z": "8ce6d9dc39b63a2b",
+        "name": "",
+        "cloudant": "9c5bcbbe178995ad",
+        "database": "gabrielinitiald",
+        "service": "_ext_",
+        "search": "_all_",
+        "design": "",
+        "index": "",
+        "x": 430,
+        "y": 420,
+        "wires": [
+            [
+                "fa0365b26f65adc0"
+            ]
+        ]
+    },
+    {
+        "id": "fa0365b26f65adc0",
+        "type": "http response",
+        "z": "8ce6d9dc39b63a2b",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 630,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "0167e257af2fa105",
+        "type": "http in",
+        "z": "8ce6d9dc39b63a2b",
+        "name": "",
+        "url": "update",
+        "method": "put",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 250,
+        "y": 540,
+        "wires": [
+            [
+                "d28939ec5ccad388",
+                "7f052df4c9848ca8"
+            ]
+        ]
+    },
+    {
+        "id": "d28939ec5ccad388",
+        "type": "cloudantplus out",
+        "z": "8ce6d9dc39b63a2b",
+        "name": "",
+        "cloudant": "9c5bcbbe178995ad",
+        "database": "gabrielinitiald",
+        "service": "_ext_",
+        "payonly": true,
+        "operation": "insert",
+        "x": 430,
+        "y": 540,
+        "wires": [
+            [
+                "198d95089772f222"
+            ]
+        ]
+    },
+    {
+        "id": "198d95089772f222",
+        "type": "http response",
+        "z": "8ce6d9dc39b63a2b",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 650,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "d2d6757787f758a2",
+        "type": "debug",
+        "z": "8ce6d9dc39b63a2b",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "7f052df4c9848ca8",
+        "type": "debug",
+        "z": "8ce6d9dc39b63a2b",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 420,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "cab2d23579cca4ed",
+        "type": "http in",
+        "z": "8ce6d9dc39b63a2b",
+        "name": "",
+        "url": "delete",
+        "method": "delete",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 260,
+        "y": 660,
+        "wires": [
+            [
+                "eeae0b5ba261edf9",
+                "feee1ff907106e48"
+            ]
+        ]
+    },
+    {
+        "id": "eeae0b5ba261edf9",
+        "type": "cloudantplus out",
+        "z": "8ce6d9dc39b63a2b",
+        "name": "",
+        "cloudant": "9c5bcbbe178995ad",
+        "database": "gabrielinitiald",
+        "service": "_ext_",
+        "payonly": true,
+        "operation": "delete",
+        "x": 450,
+        "y": 660,
+        "wires": [
+            [
+                "576b4af4d9945b74"
+            ]
+        ]
+    },
+    {
+        "id": "576b4af4d9945b74",
+        "type": "http response",
+        "z": "8ce6d9dc39b63a2b",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 630,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "feee1ff907106e48",
+        "type": "debug",
+        "z": "8ce6d9dc39b63a2b",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "4d89896d5456ecf6",
+        "type": "http in",
+        "z": "8ce6d9dc39b63a2b",
+        "name": "",
+        "url": "createmultiple",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 240,
+        "y": 840,
+        "wires": [
+            [
+                "820dfb5ad54eb553",
+                "6da9ed58fe6f74ce"
+            ]
+        ]
+    },
+    {
+        "id": "6ceb9491733e4abb",
+        "type": "cloudantplus out",
+        "z": "8ce6d9dc39b63a2b",
+        "name": "",
+        "cloudant": "9c5bcbbe178995ad",
+        "database": "gabrielinitiald",
+        "service": "_ext_",
+        "payonly": true,
+        "operation": "insert",
+        "x": 510,
+        "y": 840,
+        "wires": [
+            [
+                "272372170920b8c5"
+            ]
+        ]
+    },
+    {
+        "id": "272372170920b8c5",
+        "type": "http response",
+        "z": "8ce6d9dc39b63a2b",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 670,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "820dfb5ad54eb553",
+        "type": "debug",
+        "z": "8ce6d9dc39b63a2b",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "6da9ed58fe6f74ce",
+        "type": "split",
+        "z": "8ce6d9dc39b63a2b",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 430,
+        "y": 920,
+        "wires": [
+            [
+                "6ceb9491733e4abb"
+            ]
+        ]
+    },
+    {
+        "id": "9c5bcbbe178995ad",
+        "type": "cloudantplus",
+        "host": "https://3e3afcde-b7e3-44b2-845e-40261f160a03-bluemix.cloudantnosqldb.appdomain.cloud",
+        "name": "gabrielInitialD",
+        "useapikey": true
+    }
+]
